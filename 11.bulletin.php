@@ -3,10 +3,10 @@ error_reporting(0);//把錯誤提示隱藏
 session_start();//啟動 Session
 if($_SESSION["id"]==NULL){//如果通行證裡是空的
     echo "請先登入";
-    echo "<meta http-equiv=REFRESH content='1;url=login.html'>";//1秒後回到login.html，也就是登入畫面
+    echo "<meta http-equiv=REFRESH content='1;url=2.login.html'>";//1秒後回到login.html，也就是登入畫面
 }
 else{
-echo "歡迎, ".$_SESSION["id"]."[<a href=logout.php>登出</a>] [<a href=login.php>管理使用者</a>] [<a href=bulletin.php>新增佈告</a>]<br>";
+echo "歡迎, ".$_SESSION["id"]."[<a href=12.logout.php>登出</a>] [<a href=10.login.php>管理使用者</a>] [<a href=11.bulletin.php>新增佈告</a>]<br>";
     //三個按鈕登出、管理使用者、新增佈告
 $conn=mysqli_connect("120.105.96.90","immust","immustimmust","immust");
 $result=mysqli_query( $conn,"select * from bulletin");//把 bulletin資料表的所有資料全部抓出來」，存在$result
