@@ -6,7 +6,7 @@ $login=false;//設定登入狀態，預設false
 while($row=mysqli_fetch_array($result)){//while迴圈把從資料庫抓出來的所有資料，一筆一筆拿出來檢查
         if(($_POST["id"]==$row["id"])&&($_POST["pwd"]==$row["pwd"]))
             $login=true;
-}//if 判斷式使用者從網頁表單送過來的帳號與目前資料庫這筆資料的帳號進行比對。如果符合$login 狀態改成 true，代表登入。
+}//if 判斷式使用者從網頁表單送過來的帳號和密碼與目前資料庫這筆資料的帳號和密碼進行比對。如果都符合$login 狀態改成 true，代表登入。
  
     if($login==true){//如果登入成功
         session_start();//啟動 Session
