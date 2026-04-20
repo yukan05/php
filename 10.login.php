@@ -12,10 +12,10 @@ while($row=mysqli_fetch_array($result)){//while迴圈把從資料庫抓出來的
         session_start();//啟動 Session
         $_SESSION["id"]=$_POST["id"];//讓網頁記得你已登入
         echo "登入成功";//顯示登入成功
-        echo "<meta http-equiv=REFRESH content='0,bulletin.php'>";//等待0秒連接到bulletin.php，也就是布告欄
+        echo "<meta http-equiv=REFRESH content='0,11.bulletin.php'>";//等待0秒連接到11.bulletin.php，也就是布告欄
     }
     else {//如果登入失敗
         echo "登入失敗";//顯示登入失敗
-        echo "<meta http-equiv=REFRESH content='5,login.html'>";//等待5秒回到login.html，也就是登入畫面
+        echo "<meta http-equiv=REFRESH content='5,2.login.html'>";//等待5秒回到2.login.html，也就是登入畫面
     }
 ?>
