@@ -21,7 +21,7 @@
             $checked3="checked";
         echo "
         <html>
-            <head><title>新增佈告</title></head>
+            <head><title>修改佈告</title></head>
             <body>
                 <form method=post action=27.bulletin_edit.php>
                     佈告編號：{$row['bid']}<input type=hidden name=bid value={$row['bid']}><br>

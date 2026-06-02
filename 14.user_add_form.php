@@ -10,10 +10,10 @@
     }
     else{    
         echo "
-            <form action=15.user_add.php method=post>
-                帳號：<input type=text name=id><br>
-                密碼：<input type=text name=pwd><p></p>
-                <input type=submit value=新增> <input type=reset value=清除>
+            <form action='15.user_add.php' 'method=post'>
+                帳號：<input type='text' name='id'><br>
+                密碼：<input type='text' name='pwd'><p></p>
+                <input type='submit' value='新增'> <input type='reset' value='清除'>
             </form>
         ";
     }

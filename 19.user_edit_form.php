@@ -16,7 +16,7 @@
         <form method=post action=20.user_edit.php>
             <input type=hidden name=id value={$row['id']}>
             帳號：{$row['id']}<br> 
-            密碼：<input type=text name=pwd value={$row['pwd']}><p></p>
+            密碼：<input type='text' name='pwd' value='{$row['pwd']}'><p></p>
             <input type=submit value=修改>
         </form>
         ";
