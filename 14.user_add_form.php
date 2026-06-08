@@ -10,7 +10,7 @@
     }//如果未登入，3秒後回到登入畫面
     else{    
         echo "
-            <form action='15.user_add.php' 'method=post'>
+            <form action='15.user_add.php' method=post'>
                 帳號：<input type='text' name='id'><br>
                 密碼：<input type='text' name='pwd'><p></p>
                 <input type='submit' value='新增'> <input type='reset' value='清除'>
