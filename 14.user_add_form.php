@@ -7,7 +7,7 @@
     if (!$_SESSION["id"]) {
         echo "請登入帳號";
         echo "<meta http-equiv=REFRESH content='3, url=2.login.html'>";
-    }//如果未登入，3秒後回到登入畫面
+    }//如果未登入，顯示請登入帳號並且3秒後回到登入畫面
     else{    
         echo "
             <form action='15.user_add.php' method=post'>
