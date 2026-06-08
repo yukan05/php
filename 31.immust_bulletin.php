@@ -242,12 +242,15 @@
                   <a href=>明新管理學院</a>
                   <!---跳出登入畫面-->
                   <label onclick="document.getElementById('login').style.display='block'">登入</label>
+                　<!---當滑鼠點擊時，login 的區塊把 CSS 顯示狀態改成 block 顯示出來。-->
                   <div id="login" class="modal">
                     <span onclick="document.getElementById('login').style.display='none'">&times; 管理系統登入</span>
+                    <!---點擊叉候，把顯示狀態改成 none (隱藏)，視窗就會隱藏。-->
                     <form method=post action="10.login.php">
                         帳號：<input type=text name="id"><br />
                         密碼：<input type=password name="pwd"><p></p>
                         <input type=submit value="登入"> <input type=reset value="清除">
+                        <!---輸入帳號密碼，按下登入會以post的方式傳送到10.login.php，按下清除會清空帳號和密碼欄位-->
                     </form>
                   </div>  
                   <!---登入畫面-->
@@ -285,9 +288,12 @@
                 $result=mysqli_query($conn, "select * from bulletin");
                 echo "<table border=2><tr><th>佈告編號</th><th>佈告類別</th><th>標題</th><th>佈告內容</th><th>發佈時間</th></tr>";
                 while ($row=mysqli_fetch_array($result)){
+                // while 迴圈每次從查詢結果$result中抓取一筆資料存入 $row 陣列，直到所有佈告都抓完為止
                     echo "<tr><td>";
                     echo $row["bid"];
                     echo "</td><td>";
+                    
+                    // 資料庫中儲存的 type 數字，轉換成對應的中文字顯示給使用者看
                     if ($row["type"]==1) echo "系上公告";  
                     if ($row["type"]==2) echo "獲獎資訊"; 
                     if ($row["type"]==3) echo "徵才資訊"; 
