@@ -2,8 +2,8 @@
     <head><title>使用者管理</title></head>
     <body>
     <?php
-        error_reporting(0);
-        session_start();
+       error_reporting(0);// 關閉錯誤回報
+    session_start();// 啟動 Session
         if (!$_SESSION["id"]) {//檢查是否已登入
             echo "請登入帳號";
             echo "<meta http-equiv=REFRESH content='3, url=2.login.html'>";
